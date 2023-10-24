@@ -18,6 +18,10 @@
 
 a {
   text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  transition: 0.3s;
 }
 
 body {
@@ -115,6 +119,14 @@ ul li a:hover {
   margin-bottom: 0.5rem;
 }
 
+.title1 {
+  font-size: 2.1rem;
+  font-weight: 400;
+  line-height: 3rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
 .title {
   font-size: 2.1rem;
   font-weight: 400;
@@ -190,8 +202,8 @@ ul li a:hover {
 }
 
 @media (width < 750px) {
-  nav .checkbox {
-    display: block;
+    nav .checkbox {
+      display: block;
   }
 
   ul {

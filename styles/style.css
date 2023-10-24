@@ -152,12 +152,15 @@ img{
     border-radius: 50%;
 }
 
-@media (width < 750px) {
-  nav .checkbox {
-    display: block;
-  }
 
-  ul {
+@media (width < 750px) {
+    nav .checkbox {
+    display: block;
+    }
+
+    
+
+    ul {
     position: absolute;
     width: 100%;
     height: calc(100vh - 85px);
@@ -167,27 +170,29 @@ img{
     flex-direction: column;
     justify-content: center;
     gap: 3rem;
-  }
+    }
 
-  nav #check:checked ~ ul {
+    nav #check:checked ~ ul {
     left: 0;
-  }
+    }
 
-  ul li a {
+    ul li a {
     font-size: 1.25rem;
-  }
+    }
 
-  .section__container {
+    .section__container {
     padding: 10rem 1rem 5rem 1rem;
     text-align: center;
     grid-template-columns: repeat(1, 1fr);
-  }
+    }
 
-  .image {
+    .image {
     grid-area: 1/1/2/2;
-  }
+    height: 300px;
+    width: 300px;
+    }
 
-  .action__btns {
+    .action__btns {
     margin: auto;
-  }
+    }
 }

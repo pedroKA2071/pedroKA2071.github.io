@@ -116,7 +116,7 @@ ul li a:hover {
 }
 
 .title {
-  font-size: 2.5rem;
+  font-size: 2.1rem;
   font-weight: 400;
   line-height: 3rem;
   color: var(--text-dark);
@@ -186,7 +186,6 @@ ul li a:hover {
 }
 
 .image img {
-  width: min(25rem, 90%);
   border-radius: 100%;
 }
 
@@ -222,7 +221,10 @@ ul li a:hover {
   }
 
   .image {
-    grid-area: 1/1/2/2;
+    display: grid;
+    place-items: center;
+    justify-items: center;
+    justify-content: center;
   }
 
   .action__btns {

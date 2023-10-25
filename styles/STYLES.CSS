@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
 :root {
-  --primary-color: #b49900;
-  --primary-color-dark: #8029b3;
-  --secondary-color: #b151ce;
+  --primary-color: #000000;
+  --primary-color-dark: #F6F6F6;
+  --secondary-color: #22D4FD;
   --text-dark: #1f2937;
   --text-light: #6b7280;
   --extra-light: #faf5ff;
@@ -14,6 +14,10 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+span{
+  color: var(--secondary-color);
 }
 
 a {
@@ -53,7 +57,7 @@ nav .logo a {
   transition: 0.3s;
 }
 nav .logo a:hover {
-  color: var(--primary-color-dark);
+  color: var(--secondary-color);
 }
 
 nav .checkbox {
@@ -93,7 +97,7 @@ ul li a:hover {
 }
 
 .section {
-  background-color: var(--extra-light);
+  background-color: var(--primary-color-dark);
 }
 
 .section__container {
@@ -168,7 +172,7 @@ ul li a:hover {
 }
 
 .hire__me:hover {
-  background-color: var(--primary-color-dark);
+  background-color: var(--secondary-color);
 }
 
 .portfolio {
@@ -176,7 +180,7 @@ ul li a:hover {
 }
 
 .portfolio:hover {
-  background-color: var(--primary-color-dark);
+  background-color: var(--secondary-color);
   color: #ffffff;
 }
 

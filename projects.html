@@ -8,10 +8,11 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
       rel="stylesheet"/>
     <link rel="stylesheet" href="styles/STYLES.CSS" />
+    <link rel="stylesheet" href="styles/styleee.css">
     <title>Web Design | Responsive Portfolio</title>
   </head>
   <body>
-    <nav>
+    <nav id="nav1">
       <div class="nav__content">
         <div class="logo"><a href="index.html">Pedro Gaspar</a></div>
         <label for="check" class="checkbox">
@@ -19,22 +20,28 @@
         </label>
         <input type="checkbox" name="check" id="check" />
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">Sobre Mim</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="portifolio.HTML">Portfolio</a></li>
+          <li><a id="a1" href="index.html">Home</a></li>
+          <li><a id="a2" href="about.html">Sobre Mim</a></li>
+          <li><a id="a3" href="projects.html">Projects</a></li>
+          <li><a id="a4" href="portifolio.HTML">Portfolio</a></li>
         </ul>
       </div>
     </nav>
-    <section class="section">
+    <section id="section1" class="section">
         <div class="image1">
-          
-          <img src="assets/seta.png" alt="profile" />
-          <h1>Clone Interface Netflix</h1>
+          <br><br><br><br><br>
+          <div class="action__btns">
+            <button id="botao1" class="hire__me">Modo Escuro</button>
+          </div>
+          <br>
+          <br>
+          <br>
+          <br>
+          <h1 id="h1" >Clone Interface Netflix</h1>
           <img src="assets/netflix.logo.jpeg" alt="netflix logo" />
           <a href="https://netflxpro.github.io">veja aqui</a>
         <br>
-        <h1>Calcladora</h1>
+        <h1 id="h2" >Calculadora</h1>
           <img src="assets/calc.png" alt="netflix logo" />
           <a href="calc.html">veja aqui</a>
         <br> 
@@ -42,4 +49,32 @@
       </div>
     </section>
   </body>
+  <script>
+      const botao1 = document.getElementById('botao1')
+    const nav = document.getElementById('nav1')
+    const a1 = document.getElementById('a1')
+    const a2 = document.getElementById('a2')
+    const a3 = document.getElementById('a3')
+    const a4 = document.getElementById('a4')
+    const section = document.getElementById('section1')
+    const h1 = document.getElementById('h1')
+    const h2 = document.getElementById('h2')
+    
+   
+    
+
+      botao1.addEventListener('click', () => {
+        nav.classList.toggle('nav_dark')
+        a1.classList.toggle('a_dark')
+        a2.classList.toggle('a_dark')
+        a3.classList.toggle('a_dark')
+        a4.classList.toggle('a_dark')
+        section.classList.toggle('section_dark')
+        h1.classList.toggle('title_dark')
+        h2.classList.toggle('title_dark')
+        
+      })
+        
+        
+  </script>
 </html>

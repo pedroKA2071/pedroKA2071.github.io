@@ -12,36 +12,36 @@
     <title>Web Design | Responsive Portfolio</title>
   </head>
   <body>
-    <nav>
+    <nav id="nav1">
       <div class="nav__content">
-        <div class="logo"><a href="index.html">Pedro Gaspar</a></div>
+        <div  class="logo"><a id="a5" href="index.html">Pedro Gaspar</a></div>
         <label for="check" class="checkbox">
           <i class="ri-menu-line"></i>
         </label>
         <input type="checkbox" name="check" id="check" />
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">Sobre Mim</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="portifolio.HTML">Portfolio</a></li>
+          <li><a id="a1" href="index.html">Home</a></li>
+          <li><a id="a2" href="about.html">Sobre Mim</a></li>
+          <li><a id="a3" href="projects.html">Projects</a></li>
+          <li><a id="a4" href="portifolio.HTML">Portfolio</a></li>
         </ul>
       </div>
     </nav>
-    <section class="section">
+    <section id="section1" class="section">
       <div class="section__container">
         <div class="content">
-          <p class="subtitle">Olá</p>
-          <h1 class="title">
-            Eu Sou <span>Pedro Gaspar<br />um</span> Web Developer
+          <p id="para2" class="subtitle">Olá</p>
+          <h1 id="titulo1" class="title">
+            Eu Sou <span id="span1">Pedro Gaspar<br />um</span> Web Developer
           </h1>
-          <p class="description">
+          <p id="para1" class="description">
             Bem-vindo ao meu portfólio de desenvolvedor web! Eu sou o Pedro, um habilidoso 
             desenvolvedor web criativo com paixão por criar designs bonitos e
             sites responsivos e fáceis de usar. Eu trabalhei em uma variedade de
             projetos web, que vão desde blogs pessoais até plataformas de comércio eletrônico.
           </p>
           <div class="action__btns">
-            <button class="hire__me">Contrate-me</button>
+            <button id="botao1" class="hire__me">Modo Escuro</button>
             <button id="botao" class="portfolio">Portfolio</button>
           </div>
         </div>
@@ -52,20 +52,46 @@
     </section>
   </body>
   <script>
-          // Seu arquivo PDF a ser baixado
-          var pdfFile = 'Profile.pdf';
+      var pdfFile = 'Profile.pdf';
+    document.getElementById('botao').addEventListener('click', function() {
+        var link = document.createElement('a');
+        link.href = pdfFile;
+        link.download = 'Pedro Gaspar.pdf'; 
+        link.style.display = 'none';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    });
 
-// Função para lidar com o clique no botão
-document.getElementById('botao').addEventListener('click', function() {
-    // Cria um elemento <a> para iniciar o download
-    var link = document.createElement('a');
-    link.href = pdfFile;
-    link.download = 'seu_portfolio.pdf'; // Nome do arquivo que será baixado
-    link.style.display = 'none';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  });
+    const botao1 = document.getElementById('botao1')
+    const nav = document.getElementById('nav1')
+    const a1 = document.getElementById('a1')
+    const a2 = document.getElementById('a2')
+    const a3 = document.getElementById('a3')
+    const a4 = document.getElementById('a4')
+    const a5 = document.getElementById('a5')
+    const span = document.getElementById('span1')
+    const section = document.getElementById('section1')
+    const p = document.getElementById('para1')
+    const pp = document.getElementById('para2')
+    const titulo = document.getElementById('titulo1')
+    
+
+      botao1.addEventListener('click', () => {
+        nav.classList.toggle('nav_dark')
+        a1.classList.toggle('a_dark')
+        a2.classList.toggle('a_dark')
+        a3.classList.toggle('a_dark')
+        a4.classList.toggle('a_dark')
+        a5.classList.toggle('logo')
+        span.classList.toggle('span_dark')
+        section.classList.toggle('section_dark')
+        p.classList.toggle('description_dark')
+        pp.classList.toggle('subtitle_dark')
+        titulo.classList.toggle('title_dark')
+        
+        
+        })
 
   </script>
 </html>

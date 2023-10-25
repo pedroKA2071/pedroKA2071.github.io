@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="./styles/STYLES.CSS">
 </head>
 
-<body>
-  <nav>
+<body id="body1">
+  <nav id="nav1">
     <div class="nav__content">
       <div class="logo"><a href="index.html">Pedro Gaspar</a></div>
       <label for="check" class="checkbox">
@@ -19,41 +19,85 @@
       </label>
       <input type="checkbox" name="check" id="check" />
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">Sobre Mim</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="portifolio.HTML">Portfolio</a></li>
+        <li><a id="a1" href="index.html">Home</a></li>
+        <li><a id="a2" href="about.html">Sobre Mim</a></li>
+        <li><a id="a3" href="projects.html">Projects</a></li>
+        <li><a id="a4" href="portifolio.HTML">Portfolio</a></li>
       </ul>
     </div>
   </nav>
     <main class="apresentacao">
         <section class="apresentacao__conteudo">
           <br>
-            <h1 class="apresentacao__conteudo__titulo">Eleve seu negócio digital a outro nível<strong 
+          <div class="action__btns">
+            <button id="botao1" class="hire__me">Modo Escuro</button>
+            
+          </div>
+            <h1 id="h1" class="apresentacao__conteudo__titulo">Eleve seu negócio digital a outro nível<strong id="strong1"
             class="titulo-destaque">com um Front-end de qualidade!
             </strong></h1>
-            <p class="apresentacao__conteudo__texto">Desenvolvedor
+            <p id="p2" class="apresentacao__conteudo__texto">Desenvolvedor
             Front-end com especialidade em Angular, HTML e
             CSS. Ajudo pequenos negócios e designers a
             colocarem em prática boas ideias <strong>vamos consversa?</strong></p>
             <div class="apresentacao__links">
-                <h2 class="apresentacao__links__subtitulo">Acesse minhas redes</h2>
-                <a class="apresentacao__links__link" href="https://github.com/pedroKA2071">
-                    <img src="./assets/github.png">
+                <h2 id="h2" class="apresentacao__links__subtitulo">Acesse minhas redes</h2>
+                <a id="al1" class="apresentacao__links__link" href="https://github.com/pedroKA2071">
+                    <img id="img1" src="./assets/github.svg">
                     Github
                 </a>
-                <a class="apresentacao__links__link" href="https://www.linkedin.com/in/pedro-gaspar-a875a1281/">
-                    <img src="./assets/linkedin.png">
+                <a id="al2" class="apresentacao__links__link" href="https://www.linkedin.com/in/pedro-gaspar-a875a1281/">
+                    <img id="img1" src="./assets/linkedin.svg">
                     linkedin
                 </a>
-                <a class="apresentacao__links__link" href="https://www.instagram.com/pedro_h.gasp/">
-                    <img src="./assets/instagram.png">
+                <a id="al3" class="apresentacao__links__link" href="https://www.instagram.com/pedro_h.gasp/">
+                    <img id="img1" src="./assets/instagram.svg">
                     instagram
                 </a>
             </div>
+            
         </section>
-        <img src="./assets/imagem1.png" alt="Foto da Joana Santos programando">
+        <img src="./assets/imagem1.png" alt="Foto de Pedro Gaspar programando">
     </main>
 </body>
+<script>
+  
+  const botao1 = document.getElementById('botao1')
+  const body = document.getElementById('body1')
+  const h1 = document.getElementById('h1')
+  const h2 = document.getElementById('h2')
+  const p1 = document.getElementById('p1')
+  const p2 = document.getElementById('p2') 
+  const nav = document.getElementById('nav1')
+  const a1 = document.getElementById('a1')
+  const a2 = document.getElementById('a2')
+  const a3 = document.getElementById('a3')
+  const a4 = document.getElementById('a4')
+  const strong = document.getElementById('strong1')
+  const al1 = document.getElementById('al1')
+  const al2 = document.getElementById('al2')
+  const al3 = document.getElementById('al3')
+   
+    
 
+      botao1.addEventListener('click', () => {
+        body.classList.toggle('body_dark')
+        h1.classList.toggle('apresentacao__conteudo__titulo_dark')
+        h2.classList.toggle('apresentacao__conteudo__titulo_dark')
+        p2.classList.toggle('apresentacao__conteudo__texto_dark')
+        nav.classList.toggle('nav_dark')
+        a1.classList.toggle('a_dark')
+        a2.classList.toggle('a_dark')
+        a3.classList.toggle('a_dark')
+        a4.classList.toggle('a_dark')
+        strong.classList.toggle('titulo-destaque_dark')
+        al1.classList.toggle('apresentacao__links__link_dark')
+        al2.classList.toggle('apresentacao__links__link_dark')
+        al3.classList.toggle('apresentacao__links__link_dark')
+        
+        
+        
+        })
+
+  </script>
 </html>

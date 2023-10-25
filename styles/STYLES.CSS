@@ -8,6 +8,10 @@
   --text-light: #6b7280;
   --extra-light: #faf5ff;
   --max-width: 1200px;
+  --dark3: #000000;
+  --dark2: #f6f6f6;
+  --dark1: #fd2222;
+  --text: #313a46;
 }
 
 * {
@@ -18,6 +22,9 @@
 
 span{
   color: var(--secondary-color);
+}
+.span_dark{
+  color: var(--dark1);
 }
 
 a {
@@ -37,7 +44,15 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #ffffff;
+  background-color: var(--extra-light);
+  z-index: 99;
+}
+.nav_dark {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--text-dark);
   z-index: 99;
 }
 
@@ -50,14 +65,17 @@ nav {
   justify-content: space-between;
 }
 
+
 nav .logo a {
   font-size: 1.5rem;
   font-weight: 600;
-  color: var(--primary-color);
+  color: var(--text-light);
   transition: 0.3s;
 }
+
+
 nav .logo a:hover {
-  color: var(--secondary-color);
+  color: var(--text-light);
 }
 
 nav .checkbox {
@@ -89,15 +107,29 @@ ul li a {
   color: var(--text-dark);
   transition: 0.3s;
 }
+.a_dark{
+  padding: 0.5rem 1rem;
+  border: 2px solid transparent;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--primary-color-dark);
+  transition: 0.3s;
+}
+
+
 
 ul li a:hover {
-  border-top-color: var(--secondary-color);
-  border-bottom-color: var(--secondary-color);
-  color: var(--secondary-color);
+  border-top-color: var(--text-light);
+  border-bottom-color: var(--text-light);
+  color: var(--text-light);
 }
 
 .section {
   background-color: var(--primary-color-dark);
+}
+
+.section_dark {
+  background-color: var(--text);
 }
 
 .section__container {
@@ -118,7 +150,13 @@ ul li a:hover {
 
 .subtitle {
   letter-spacing: 2px;
-  color: var(--text-light);
+  color: var(--secondary-color);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.subtitle_dark {
+  letter-spacing: 2px;
+  color: var(--dark1);
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
@@ -138,6 +176,13 @@ ul li a:hover {
   color: var(--text-dark);
   margin-bottom: 1rem;
 }
+.title_dark{
+  font-size: 2.1rem;
+  font-weight: 400;
+  line-height: 3rem;
+  color: var(--extra-light);
+  margin-bottom: 1rem;
+}
 
 .title span {
   font-weight: 600;
@@ -145,7 +190,12 @@ ul li a:hover {
 
 .description {
   line-height: 1.5rem;
-  color: var(--text-light);
+  color: var(--text-dark);
+  margin-bottom: 2rem;
+}
+.description_dark{
+  line-height: 1.5rem;
+  color: var(--primary-color-dark);
   margin-bottom: 2rem;
 }
 
@@ -172,7 +222,7 @@ ul li a:hover {
 }
 
 .hire__me:hover {
-  background-color: var(--secondary-color);
+  background-color: var(--text-light);
 }
 
 .portfolio {
@@ -180,7 +230,7 @@ ul li a:hover {
 }
 
 .portfolio:hover {
-  background-color: var(--secondary-color);
+  background-color: var(--text-light);
   color: #ffffff;
 }
 

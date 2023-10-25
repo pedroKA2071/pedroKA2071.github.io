@@ -11,8 +11,8 @@
 
 </head>
 
-<body>
-  <nav>
+<body id="body1">
+  <nav id="nav1">
     <div class="nav__content">
       <div class="logo"><a href="index.html">Pedro Gaspar</a></div>
       <label for="check" class="checkbox">
@@ -20,10 +20,10 @@
       </label>
       <input type="checkbox" name="check" id="check" />
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">Sobre Mim</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="portifolio.HTML">Portfolio</a></li>
+        <li><a id="a1" href="index.html">Home</a></li>
+        <li><a id="a2" href="about.html">Sobre Mim</a></li>
+        <li><a id="a3" href="projects.html">Projects</a></li>
+        <li><a id="a4" href="portifolio.HTML">Portfolio</a></li>
       </ul>
     </div>
   </nav>
@@ -31,8 +31,12 @@
     <main class="apresentacao">
         <section class="apresentacao__conteudo">
           <br>
-            <h1 class="apresentacao__conteudo__titulo">Sobre mim</h1>
-            <p class="apresentacao__conteudo__texto">Olá, sou um desenvolvedor web apaixonado por carros e basquete, com formação em Tecnologia da Informação. Minha jornada no mundo da tecnologia começou quando decidi mergulhar no universo da programação. 
+          <div class="action__btns">
+            <button id="botao1" class="hire__me">Modo Escuro</button>
+            
+          </div>
+            <h1 id="h1" class="apresentacao__conteudo__titulo">Sobre mim</h1>
+            <p id="p1" class="apresentacao__conteudo__texto">Olá, sou um desenvolvedor web apaixonado por carros e basquete, com formação em Tecnologia da Informação. Minha jornada no mundo da tecnologia começou quando decidi mergulhar no universo da programação. 
   
               Com o tempo, adquiri uma sólida base de conhecimento e habilidades que me permitiram criar soluções web incríveis.
 
@@ -42,7 +46,7 @@
               <br>
               <br>Além disso, sou um grande fã de basquete. Acompanho as partidas da NBA e adoro jogar quando tenho a chance. O trabalho em equipe, a estratégia e a paixão pelo jogo me inspiram, assim como a programação.
             </p>
-            <p class="apresentacao__conteudo__texto">
+            <p id="p2" class="apresentacao__conteudo__texto">
               Minhas habilidades incluem HTML, CSS e JavaScript, que formam a base do desenvolvimento web. Além disso, domino o Angular, uma estrutura poderosa para a criação de aplicativos web dinâmicos. Para gerenciar e colaborar em projetos, sou experiente em Git e GitHub, garantindo um fluxo de trabalho eficiente e colaborativo.
 
               <br>
@@ -54,5 +58,37 @@
         <img src="./assets/imagem2.png" alt="Foto de Pedro Gaspar programando">
     </main>
 </body>
+<script>
+  
+  const botao1 = document.getElementById('botao1')
+  const body = document.getElementById('body1')
+  const h1 = document.getElementById('h1')
+  const p1 = document.getElementById('p1')
+  const p2 = document.getElementById('p2') 
+  const nav = document.getElementById('nav1')
+  const a1 = document.getElementById('a1')
+  const a2 = document.getElementById('a2')
+  const a3 = document.getElementById('a3')
+  const a4 = document.getElementById('a4')
 
+   
+    
+
+      botao1.addEventListener('click', () => {
+        body.classList.toggle('body_dark')
+        h1.classList.toggle('apresentacao__conteudo__titulo_dark')
+        p1.classList.toggle('apresentacao__conteudo__texto_dark')
+        p2.classList.toggle('apresentacao__conteudo__texto_dark')
+        nav.classList.toggle('nav_dark')
+        a1.classList.toggle('a_dark')
+        a2.classList.toggle('a_dark')
+        a3.classList.toggle('a_dark')
+        a4.classList.toggle('a_dark')
+        
+        
+        
+        })
+
+  </script>
+</script>
 </html>

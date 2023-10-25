@@ -42,7 +42,7 @@
           </p>
           <div class="action__btns">
             <button class="hire__me">Contrate-me</button>
-            <button class="portfolio">Portfolio</button>
+            <button id="botao" class="portfolio">Portfolio</button>
           </div>
         </div>
         <div class="image">
@@ -51,4 +51,21 @@
       </div>
     </section>
   </body>
+  <script>
+          // Seu arquivo PDF a ser baixado
+          var pdfFile = 'Profile.pdf';
+
+// Função para lidar com o clique no botão
+document.getElementById('botao').addEventListener('click', function() {
+    // Cria um elemento <a> para iniciar o download
+    var link = document.createElement('a');
+    link.href = pdfFile;
+    link.download = 'seu_portfolio.pdf'; // Nome do arquivo que será baixado
+    link.style.display = 'none';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  });
+
+  </script>
 </html>

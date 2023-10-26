@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="codigo.png">
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
       rel="stylesheet"
@@ -20,7 +21,7 @@
         </label>
         <input type="checkbox" name="check" id="check" />
         <ul>
-          <li><a id="a1" href="index.html">Home</a></li>
+          <li><a id="a1" href="index.html">Inicio</a></li>
           <li><a id="a2" href="about.html">Sobre Mim</a></li>
           <li><a id="a3" href="projects.html">Projetos</a></li>
           <li><a id="a4" href="portifolio.HTML">Portfolio</a></li>
@@ -36,7 +37,7 @@
         <div class="content">
           <p id="para2" class="subtitle">Olá</p>
           <h1 id="titulo1" class="title">
-            Eu Sou <span id="span1">Pedro Gaspar<br />um</span> Web Developer
+            Eu Sou <span id="span1">Pedro Gaspar<br />Web Developer</span> 
           </h1>
           <p id="para1" class="description">
             Bem-vindo ao meu portfólio de desenvolvedor web! Eu sou o Pedro, um habilidoso 
@@ -113,6 +114,33 @@
         imgatual = imganterior;
         imganterior = aux;
       }
+
+
+      //armazenando na máquina do usuario o tema
+localStorage.setItem('theme', 'root'); 
+
+//acessado o tema da maquina do usuário
+localStorage.getItem('theme'); 
+// dark
+
+const toggle = document.getElementById("botao1");
+const theme = window.localStorage.getItem("theme");
+
+/* verifica se o tema armazenado no localStorage é escuro
+se sim aplica o tema escuro ao body */
+if (theme === "root") document.body.classList.add("root");
+
+// event listener para quando o botão de alterar o tema for clicado
+toggle.addEventListener("click", () => {
+  document.body.classList.toggle("root");
+  if (theme === "root") {
+    window.localStorage.setItem("theme", "light");
+  } else window.localStorage.setItem("theme", "root");
+});
+
+refresh.addEventListener("click", () => {
+  window.location.reload();
+});
 
 
 

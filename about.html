@@ -24,6 +24,9 @@
         <li><a id="a2" href="about.html">Sobre Mim</a></li>
         <li><a id="a3" href="projects.html">Projetos</a></li>
         <li><a id="a4" href="portifolio.HTML">Portfolio</a></li>
+        <div class="action__btns">
+          <button id="botao1" onclick="trocar1()" class="hire__me"><img id="figura" src="sun.svg" alt=""></button>
+        </div>
       </ul>
     </div>
   </nav>
@@ -31,10 +34,6 @@
     <main class="apresentacao">
         <section class="apresentacao__conteudo">
           <br>
-          <div class="action__btns">
-            <button id="botao1" class="hire__me">Modo Escuro</button>
-            
-          </div>
             <h1 id="h1" class="apresentacao__conteudo__titulo">Sobre mim</h1>
             <p id="p1" class="apresentacao__conteudo__texto">Olá, sou um desenvolvedor web apaixonado por carros e basquete, com formação em Tecnologia da Informação. Minha jornada no mundo da tecnologia começou quando decidi mergulhar no universo da programação. 
   
@@ -88,7 +87,15 @@
         
         
         })
+        var imgatual1 = "moon.svg";
+      var imganterior1 = "sun.svg";
 
-  </script>
+      function trocar1(){
+        document.getElementById("figura").src = imgatual1;
+        let aux = imgatual1;
+        imgatual1 = imganterior1;
+        imganterior1 = aux;
+      }
+
 </script>
 </html>

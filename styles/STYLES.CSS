@@ -217,7 +217,7 @@ ul li a:hover {
 }
 
 .hire__me {
-  background-color: var(--primary-color);
+  background-color: #bec6da;
   color: #ffffff;
 }
 
@@ -253,6 +253,11 @@ ul li a:hover {
 
 .image img {
   border-radius: 100%;
+
+}
+
+.image0{
+ background: url();
 }
 
 @media (width < 750px) {

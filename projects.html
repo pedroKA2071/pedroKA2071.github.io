@@ -24,15 +24,15 @@
           <li><a id="a2" href="about.html">Sobre Mim</a></li>
           <li><a id="a3" href="projects.html">Projetos</a></li>
           <li><a id="a4" href="portifolio.HTML">Portfolio</a></li>
+          <div class="action__btns">
+            <button id="botao1" onclick="trocar()" class="hire__me"><img id="figura" src="sun.svg" alt=""></button>
+          </div>
         </ul>
       </div>
     </nav>
     <section id="section1" class="section">
         <div class="image1">
           <br><br><br><br><br>
-          <div class="action__btns">
-            <button id="botao1" class="hire__me">Modo Escuro</button>
-          </div>
           <br>
           <br>
           <br>
@@ -74,6 +74,17 @@
         h2.classList.toggle('title_dark')
         
       })
+
+      var imgatual = "moon.svg";
+      var imganterior = "sun.svg";
+
+      function trocar(){
+        document.getElementById("figura").src = imgatual;
+        let aux = imgatual;
+        imgatual = imganterior;
+        imganterior = aux;
+      }
+
         
         
   </script>

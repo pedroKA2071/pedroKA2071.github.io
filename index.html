@@ -24,6 +24,10 @@
           <li><a id="a2" href="about.html">Sobre Mim</a></li>
           <li><a id="a3" href="projects.html">Projetos</a></li>
           <li><a id="a4" href="portifolio.HTML">Portfolio</a></li>
+          <div class="action__btns">
+            <button id="botao1" onclick="trocar()" class="hire__me"><img  id="figura" src="sun.svg" alt=""></button>
+            
+          </div>
         </ul>
       </div>
     </nav>
@@ -41,7 +45,6 @@
             projetos web, que vão desde blogs pessoais até plataformas de comércio eletrônico.
           </p>
           <div class="action__btns">
-            <button id="botao1" class="hire__me">Modo Escuro</button>
             <button id="botao" class="portfolio">Portfolio</button>
           </div>
         </div>
@@ -75,6 +78,7 @@
     const p = document.getElementById('para1')
     const pp = document.getElementById('para2')
     const titulo = document.getElementById('titulo1')
+    const image = document.getElementById('img1')
     
 
       botao1.addEventListener('click', () => {
@@ -89,9 +93,22 @@
         p.classList.toggle('description_dark')
         pp.classList.toggle('subtitle_dark')
         titulo.classList.toggle('title_dark')
-        
-        
-        })
+        image.classList.toggle('image0')
+
+      })
+
+      var imgatual = "moon.svg";
+      var imganterior = "sun.svg";
+
+      function trocar(){
+        document.getElementById("figura").src = imgatual;
+        let aux = imgatual;
+        imgatual = imganterior;
+        imganterior = aux;
+      }
+
+
+
 
   </script>
 </html>

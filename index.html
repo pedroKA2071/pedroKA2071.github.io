@@ -44,7 +44,7 @@
             sites responsivos e fáceis de usar. Eu trabalhei em uma variedade de
             projetos web, que vão desde blogs pessoais até plataformas de comércio eletrônico.
           </p>
-          <div class="action__btns">
+          <div class="action__btns1">
             <button id="botao" class="portfolio">Portfolio</button>
           </div>
         </div>
@@ -78,7 +78,8 @@
     const p = document.getElementById('para1')
     const pp = document.getElementById('para2')
     const titulo = document.getElementById('titulo1')
-    const image = document.getElementById('img1')
+    const bot = document.getElementById('botao')
+    const bot2 = document.getElementById('botao1')
     
 
       botao1.addEventListener('click', () => {
@@ -87,13 +88,19 @@
         a2.classList.toggle('a_dark')
         a3.classList.toggle('a_dark')
         a4.classList.toggle('a_dark')
+        a4.classList.toggle('a_dark:hover')
         a5.classList.toggle('logo')
         span.classList.toggle('span_dark')
         section.classList.toggle('section_dark')
         p.classList.toggle('description_dark')
         pp.classList.toggle('subtitle_dark')
         titulo.classList.toggle('title_dark')
-        image.classList.toggle('image0')
+        bot.classList.toggle('portfolio_dark')
+        bot.classList.toggle('p_dark:hover')
+        bot2.classList.toggle('hire__me_dark')
+        bot2.classList.toggle('hire__me_dark:hover')
+        
+       
 
       })
 

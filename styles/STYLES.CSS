@@ -119,9 +119,14 @@ ul li a {
 
 
 ul li a:hover {
-  border-top-color: var(--text-light);
-  border-bottom-color: var(--text-light);
-  color: var(--text-light);
+  border-top-color: var(--secondary-color);
+  border-bottom-color: var(--secondary-color);
+  color: var(--secondary-color);
+}
+.a_dark:hover {
+  border-top-color: var(--dark1);
+  border-bottom-color: var(--dark1);
+  color: var(--dark1);
 }
 
 .section {
@@ -215,24 +220,59 @@ ul li a:hover {
   transition: 0.3s;
   cursor: pointer;
 }
+.action__btns1 {
+  display: flex;
+  gap: 1rem;
+}
+
+.action__btns1 button {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 1rem 2rem;
+  outline: none;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
 
 .hire__me {
-  background-color: #bec6da;
+  background-color: var(--extra-light);
+  color: #ffffff;
+}
+.hire__me_dark {
+  background-color: var(--text-light);
   color: #ffffff;
 }
 
+
 .hire__me:hover {
-  background-color: var(--text-light);
+  background-color: var(--secondary-color);
+}
+.hire__me_dark:hover {
+  background-color: var(--dark1);
 }
 
 .portfolio {
   color: var(--primary-color);
 }
 
+.portfolio_dark {
+  color: var(--primary-color-dark);
+  background-color: var(--text-dark);
+}
+
+
 .portfolio:hover {
-  background-color: var(--text-light);
+  background-color: var(--secondary-color);
   color: #ffffff;
 }
+.portfolio_dark:hover {
+  background-color: var(--dark1);
+  color: #ffffff;
+}
+
 
 .image {
   display: grid;
